@@ -15,7 +15,7 @@ export function config(options = undefined) {
  * Enumerates the environment's key-value pairs.
  */
 export function* enumerate() {
-    for (const key of process.env)
+    for (const key in process.env)
         yield {
             key,
             value: process.env[key]
